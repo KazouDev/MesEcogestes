@@ -1,0 +1,463 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --background: #fff;
+    --main-text-color: #6da63f;
+    --text-color: #313131;
+}
+
+body {
+    background-color: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    color: var(--main-text-color);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 1.5em 3em;
+}
+
+header img{
+    width: 300px;
+}
+
+header a{
+    background-color: var(--main-text-color);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+header a:hover, header a:visited, header a:link{
+    color: #fff;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 500px) {
+    header a {
+        display: none;
+    }
+}
+
+.details-section {
+    padding: 1.5em 3em;
+    min-height: calc(100vh - (var(--navbar-height) + 2*var(--navbar-padding)));
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.details-section .present {
+    margin: 5px;
+    margin-bottom: 100px;
+    width: 60%;
+    text-align: center;
+}
+
+.details-section .present h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 3.4rem;
+    color: var(--main-text-color);
+}
+
+.details-section .present p {
+    font-size: 1.8rem;
+    color: var(--text-color);
+}
+
+.details-section .information {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 850px) {
+    .details-section .present {
+        width: 85%;
+    }
+    .details-section .information {
+        width: 85%;
+    }
+}
+
+.details-section .information h3 {
+    font-size: 1.8rem;
+    color: var(--main-text-color);
+}
+
+.details-section .information .row {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.details-section .information img {
+    height: 75px;
+    width: 75px;
+    margin: 15px;
+}
+
+#loupe {
+    z-index: 2;
+    position:fixed;
+    right: 40px;
+    bottom: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #618E3C;
+    color: #E7E7E7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 3px 1px 1px;
+}
+
+#loupe a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3px;
+}
+
+#loupe img {
+    width: 30px;
+    height: 30px;
+}
+
+#loupe:hover {
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1.15);
+}
+
+footer {
+    display: block;
+    margin-top: auto;
+    background-color: #444444;
+    position: relative;
+    bottom: 0%;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  footer p {
+    color: white;
+    text-align: center;
+  }
+  
+  footer a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    width: auto;
+    color: white;
+    animation: 0.4s ease-in-out;
+  }
+
+  footer a::after {
+    content: "";
+    display: block;
+    background-color: var(--main-text-color);
+    width: 0%;
+    height: 3px;
+    transition: width 0.2s ease-in-out;
+  }
+  
+  footer a:hover::after {
+    width: 100%;
+  }
+
+#yoann
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+#artMap
+{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#artMap>h2
+{
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: var(--main-text-color);
+    text-align: center;
+}
+#rech
+{
+    display: flex;
+    width: 60%;
+    margin: 10px;
+}
+#chercheVille
+{
+    margin-right: 10px;
+}
+#localisation{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#localisation>img
+{
+    width: 20px;
+    object-fit: contain;
+}
+#labLoc
+{
+    margin-left: 5px;
+}
+
+#map
+{
+    
+    width: 60%;
+    height: 500px;
+    background-color: black;
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 850px) {
+    #map {
+        width: 90%;
+    }
+}
+
+
+
+#tri
+{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#tri>h2
+{
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: var(--main-text-color);
+    text-align: center;
+}
+
+#rechDech
+{
+    width: 400px;
+    height: 30px;
+}
+
+#dechetOrigin
+{
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#dechetOrigin>img
+{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+#dechetOrigin>div>h3
+{
+    font-size: 28px;
+}
+#dechetOrigin>div>h3>p
+{
+    font-size: 14px;
+}
+#dechets
+{
+    display: flex;
+}
+.dechet
+{
+    /* background-color: lightgray; */
+    border: solid 1px gray;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    width: 400px;
+    text-align: center;
+}
+#dechet1
+{
+    background-color: lightgreen;
+}
+#dechet2
+{
+    background-color: yellow;
+}
+.dechet>img
+{
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+.dechet>h4
+{
+    font-size: 18px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.product-cart {
+    width: 200px;
+    height: 150px;
+    background-color: #55624c;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 6em 1em;
+    margin: 50px;
+    text-align: center;
+}
+
+hr {
+    width: 80%;
+}
+.product-cart h2 {
+    margin: 6px;
+}
+
+.trier {
+    background-color: rgb(255, 255, 68);
+}
+
+.ville {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column  ;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    padding: 12px 20px;
+    margin: 15px;
+    font-size: 1rem;
+    width: 200px;
+    border-style: solid;
+    border-color: #313131;
+    text-align: center;
+    outline: transparent;
+}
+
+#results {
+    margin-bottom: 20px;
+    position: absolute;
+    z-index: 5;
+    top: 62px;
+}
+
+#results p {
+    padding: 12px 20px;
+    width: 200px;
+    text-align: center;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#results p:nth-child(n) {
+    background-color: rgb(153, 153, 153);
+}
+
+#results p:nth-child(2n) {
+    background-color: #E7E7E7;
+}
+
+#results-produits {
+    margin-bottom: 20px;
+}
+
+#results-produits p {
+    padding: 12px 20px;
+    width: 200px;
+    text-align: center;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#results-produits p:nth-child(n) {
+    background-color: rgb(153, 153, 153);
+}
+
+#results-produits p:nth-child(2n) {
+    background-color: #E7E7E7;
+}
+
+.produit {
+    width: 100%;
+    display: flex;
+    flex-direction: column  ;
+    justify-content: center;
+    align-items: center;
+}
+
+.V {
+    background-color: #6da63f;
+}
+
+.O {
+    background-color: rgb(232, 91, 39);
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Mes Ecogestes</title>
+    <script src="js/script.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2J8RpQaHALpxKmAGqNQSZS8Sa3qXWC6Q&callback=initMap&v=weekly"
+        defer></script>
+
+</head>
+
+<body>
+    <header>
+        <img src="./assets/logo.jpeg" alt="Mes écogestes">
+        <a href="mailto:ethan.levacher@etudiant.univ-rennes1.fr">Nous Contacter</a>
+    </header>
+
+    <main>
+        <section class="details-section">
+            <div class="present">
+                <h2>Adoptez des Ecogestes</h2>
+                <p>Les écogestes sont des simples changement d'habitude, facile à prendre, et permettant de lutter
+                    contre la dégradation environnementale.</p>
+            </div>
+
+            <div class="information">
+                <div class="row">
+                    <div class="icon">
+                        <img src="assets/icon/gaspillage.png" alt="">
+                    </div>
+                    <div class="texte">
+                        <h3>500 kg de déchets/an</h3>
+                        <p>Chaque année, chaque personne produit en moyenne environ 500 kg de déchets, ce qui correspond
+                            à environ 1,4 kg par jour. En France, cela représente environ 40 millions de tonnes de
+                            déchets produits chaque année.</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="texte">
+                        <h3>Déchets et climat</h3>
+                        <p>Le traitement des déchets a un impact significatif sur l'environnement. Par exemple, les
+                            décharges produisent du méthane, un gaz à effet de serre qui est 28 fois plus puissant que
+                            le dioxyde de carbone en termes de capacité à retenir la chaleur dans l'atmosphère.</p>
+                    </div>
+                    <div class="icon">
+                        <img src="assets/icon/co2_1.png" alt="">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="icon">
+                        <img src="assets/icon/boite-de-recyclage.png" alt="">
+                    </div>
+                    <div class="texte">
+                        <h3>Recycler : sauver la planète</h3>
+                        <p>Le recyclage est un moyen important de réduire l'impact environnemental des déchets. En
+                            recyclant une tonne de papier, on peut économiser jusqu'à 17 arbres, 7000 Litres d'eau et 4
+                            000 kilowatts-heures d'énergie électrique, soit suffisamment d'énergie pour alimenter une
+                            maison pendant six mois</p>
+                    </div>
+                </div>
+                <div id="loupe">
+                    <a href="#artMap">
+                        <img src="assets/icon/download.svg" alt="Loupe">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section id="yoann">
+            <article id="artMap">
+                <h2>
+                    Localiser les points de collecte
+                </h2>
+                <div class="ville">
+                    <input id="input" type="text" placeholder="Saisissez ici la ville" onkeyup="updateResults()">
+                    <div id="results"></div>
+                </div>
+                <div id="map">
+
+                </div>
+            </article>
+
+
+            <article id="tri">
+                <h2>
+                    Un déchet, une poubelle
+                </h2>
+                <div class="produit">
+                    <input id="input-produit" type="text" placeholder="Saisissez ici le produit"
+                        onkeyup="updateProduits()">
+                    <div id="results-produits"></div>
+                </div>
+                <div id="d" style="display: none;">
+                    <div id="dechetOrigin">
+                        <div>
+                            <h3 id="titre-produit"></h3>    
+                        </div>
+                    </div>
+                    <div id="dechets">
+                        <div id="rowProduct" class="row">
+
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+    </main>
+
+    <footer>
+        <p><a href="/mention-legale">Mentions Légales</a> - © 2023 MesEcogestes Tous droits réservés.</p>
+    </footer>
+</body>
+
+</html>
